@@ -38,6 +38,10 @@ int main()
        {
            v.pb((*it).second);
        }
+//       for(lli i = 0; i < v.size(); ++i)
+//       {
+//           cout << v[i] << endl;
+//       }
        if(vowel.size() == 0)
         cout << "Good" << endl;
        else
@@ -49,12 +53,16 @@ int main()
                else if(v[i]>=v[i+1])
                 ++worstFlag;
            }
-           if(goodFlag == vowel.size()-1)
+           if(v.size() == 1)
+            cout << "Bad" << endl;
+           else{
+           if(goodFlag == v.size()-1)
             cout << "Good"<< endl;
-           else if (worstFlag == vowel.size() - 1)
+           else if (worstFlag == v.size() - 1)
             cout << "Worst"<<endl;
            else
             cout << "Bad" << endl;
+           }
        }
 
     }
